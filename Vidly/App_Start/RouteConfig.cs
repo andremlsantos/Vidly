@@ -14,13 +14,17 @@ namespace Vidly
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // enable attribute routing
+            routes.MapMvcAttributeRoutes();
+
+
             // temos uma expressao regular para numero digitos mes e ano
-            routes.MapRoute(
-                "MoviesByReleaseDate",
-                "movies/released/{year}/{month}",
-                new { controller = "Movies", action = "ByReleasedDate" },
-                new { year = @"\d{4}", month = @"\d{2}" }
-                );
+            //routes.MapRoute(
+            //    "MoviesByReleaseDate",
+            //    "movies/released/{year}/{month}",
+            //    new { controller = "Movies", action = "ByReleasedDate" },
+            //    new { year = @"\d{4}", month = @"\d{2}" }
+            //    );
 
             routes.MapRoute(
                 name: "Default",
