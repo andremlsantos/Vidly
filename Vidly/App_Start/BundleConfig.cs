@@ -1,8 +1,12 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace Vidly
 {
+    /*
+     * Here we can combine and compress multiple js files into bundle
+     * Reduce number http requests required to get a page loaded
+     * Faster page load
+     */
     public class BundleConfig
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
@@ -23,7 +27,7 @@ namespace Vidly
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css"));
         }
     }
