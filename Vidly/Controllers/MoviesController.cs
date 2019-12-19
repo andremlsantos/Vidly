@@ -64,10 +64,40 @@ namespace Vidly.Controllers
             return Content(String.Format("/movies?pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
 
+        // GET: Movies/released/year/month
+        /*
+         Attribute routing com regex,
+         Mais poderoso que normal routing pq se o quizermos fazer alteracoes, so fazemos aqui
+         */
+        /*
+         *
+         */
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
         public ActionResult ByReleasedDate(int year, int month)
         {
             return Content("year: " + year + " month: " + month);
+        }
+
+        // GET: Movies/PassDataDictionary
+        public ActionResult PassDataViews()
+        {
+            var movie = new Movie() { Name = "Shrek" };
+
+            // Passing data to View as a Dictionary with ViewData
+            ViewData["Movie"] = movie;
+
+            var randomMovie = new Movie() { Name = "RandomShrek" };
+
+            // Passing data to View as a Dictionary with ViewBag 
+            ViewBag.RandomMovie = randomMovie;
+
+            // Para onde vai data? Exactamente mesmo
+            //var viewResult = new ViewResult();
+            //viewResult.ViewBag.RandomMovie = randomMovie;
+            //viewResult.ViewData.Model = randomMovie;
+
+            // Ctrl B
+            return View();
         }
     }
 }
