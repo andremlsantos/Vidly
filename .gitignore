@@ -76,3 +76,4 @@ _[Ss]cripts
 *.dot[Cc]over
 .vs/Vidly/v15/Server/sqlite3/db.lock
 .vs/Vidly/v15/Server/sqlite3/storage.ide-wal
+.vs/
