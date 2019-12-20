@@ -171,6 +171,7 @@
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Movies\PassDataViews.cshtml" />
     <Content Include="Views\Movies\RandomViewModel.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
